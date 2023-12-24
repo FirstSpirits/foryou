@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(201, 141, 141); 
+    background-image: url('../img/heart.png'); 
+    background-size: cover;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+}
+
+h1 {
+    color: #000000;
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: rgb(201, 141, 141); 
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease; 
+    font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+button:hover {
+    background-color: rgb(201, 141, 141); 
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2; 
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translate(-50%, 100vh);
+    }
+}
+
+
+.images {
+    display: none;
+    margin-top: 20px;
+}
+
+.images img {
+    max-width: 100%;
+}
